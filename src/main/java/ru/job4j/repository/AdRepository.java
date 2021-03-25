@@ -9,7 +9,7 @@ public class AdRepository {
     Hibernate hb = new Hibernate();
 
     public List<Ad> lastDay() {
-        return hb.get(s -> s.createQuery("From Ad a Where careated >= current_date()")).list();
+        return hb.get(s -> s.createQuery("From Ad a Where created >= current_date()")).list();
     }
 
     public List<Ad> withPic() {
